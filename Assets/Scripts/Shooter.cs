@@ -33,11 +33,14 @@ public class Shooter : MonoBehaviour
                 //参照値渡し原本影響しないときとするときがある
                 //参照渡し原本に影響する
             }
-            /*貫通ビーム　拡張for文
+            /*貫通ビーム　拡張for文 
+             ビームにあたった球たちがレイキャスト構造体の配列として返ってくる
              foreach(RaycastHit hit in Physics.RaycastAll(ray)) {
-             Destroy(hit.collider.gameObject);
+                Destroy(hit.collider.gameObject);
+            デストロイは１個ずつしか消せないからfor文で消す
              }
             */
+
             /*もっとパワーのある光線　直径3mの球でレイを飛ばす
               foreach (RaycastHit hit in Physics.SphereCastAll(ray,3f)) {
                Destroy(hit.collider.gameObject);
