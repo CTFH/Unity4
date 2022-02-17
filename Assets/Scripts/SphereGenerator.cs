@@ -14,6 +14,7 @@ public class SphereGenerator : MonoBehaviour
                 {
                     //createPrimitiveで原点にオブジェクトを作成
                     GameObject obj = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                    //intからfloatに型の変換（キャスト）をしているからfloatにカッコがついている
                     obj.transform.position = new Vector3((float)x, (float)y, (float)z);
                 }
             }
